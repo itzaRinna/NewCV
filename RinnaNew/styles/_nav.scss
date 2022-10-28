@@ -8,29 +8,55 @@
   flex-direction: column;
   color: #f6f6f6;
 
-  .herotxt {
-      text-align: center;
-      h1 {
-          font-weight: 800;
-          font-size: 5.2rem;
-          font-family: 'Major Mono Display', monospace;
-      }
-      h2 {
-          font-weight: 800;
-          font-size: 3.2rem;
-          font-family: 'Montserrat Alternates', monospace;
-      }
+.herotxt {
+  .slide h1 {
+    text-align: left;
+    font-weight: 800;
+    font-size: 5.6rem;
+    font-family: 'Major Mono Display', monospace;
+    color: #00ff93;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid transparent; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .1em; /* Adjust as needed */
+    animation:
+      typing 3.75s,
   }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100%{
+      left: 0;
+    }
+  }
+
+   
+    h2 {
+        font-weight: 800;
+        font-size: 3.2rem;
+        font-family: 'Montserrat Alternates', monospace;
+        text-align: center;
+    } 
+  }
+
   .scroll a {
     position: relative;
     align-self: flex-end;
     text-decoration: none;
-    left:0;
-    transition: all 0.2s ease-in-out; 
+    bottom: 0;
+    left: 0;
+    transition: all 0.25s ease-in-out; 
   }
   
     .scroll a:hover {
-    left: 16px;
+    bottom: 18px;
+    left: 18px;
   }
 }
 
@@ -97,23 +123,6 @@ left:92px;
 rotate:240deg;
 }
 
-#trapbar1 {
-top: 59px;
-left: 57px;
-rotate: -40deg;;
-}
-#trapbar2 {
-top: 0px;
-left: 64px;
-rotate: 250deg;
-
-}
-#trapbar3 {
-top: -2px;
-left: 90px;
-rotate: 180deg;
-}
-
 .sidenav {
 height: 100%;
 width: 0;
@@ -140,6 +149,7 @@ transition: 0.3s;
 .sidenav a:hover {
 color: #00ff93;
 font-size: 30px;
+font-weight: 800;
 }
 
 .sidenav .closebtn {

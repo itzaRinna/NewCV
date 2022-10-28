@@ -361,27 +361,67 @@ template {
   color: #f6f6f6;
 }
 .start .herotxt {
-  text-align: center;
+  /* The typing effect */
 }
-.start .herotxt h1 {
+.start .herotxt .slide h1 {
+  text-align: left;
   font-weight: 800;
-  font-size: 5.2rem;
+  font-size: 5.6rem;
   font-family: "Major Mono Display", monospace;
+  color: #00ff93;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid transparent; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.1em; /* Adjust as needed */
+  -webkit-animation: typing 3.75s;
+          animation: typing 3.75s;
+}
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+  40%, 60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+  40%, 60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
 }
 .start .herotxt h2 {
   font-weight: 800;
   font-size: 3.2rem;
   font-family: "Montserrat Alternates", monospace;
+  text-align: center;
 }
 .start .scroll a {
   position: relative;
   align-self: flex-end;
   text-decoration: none;
+  bottom: 0;
   left: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .start .scroll a:hover {
-  left: 16px;
+  bottom: 18px;
+  left: 18px;
 }
 
 .trap {
@@ -456,24 +496,6 @@ template {
   rotate: 240deg;
 }
 
-#trapbar1 {
-  top: 59px;
-  left: 57px;
-  rotate: -40deg;
-}
-
-#trapbar2 {
-  top: 0px;
-  left: 64px;
-  rotate: 250deg;
-}
-
-#trapbar3 {
-  top: -2px;
-  left: 90px;
-  rotate: 180deg;
-}
-
 .sidenav {
   height: 100%;
   width: 0;
@@ -500,6 +522,7 @@ template {
 .sidenav a:hover {
   color: #00ff93;
   font-size: 30px;
+  font-weight: 800;
 }
 
 .sidenav .closebtn {
