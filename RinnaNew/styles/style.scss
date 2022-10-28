@@ -1,0 +1,39 @@
+/* Variables */
+$background: #23272b;
+$top_nav_height:30px;
+
+
+/* Linking Stylesheets By Loading Order */
+@import './normalize.scss';
+@import './mobile';
+@import './nav';
+@import './abtme';
+@import './resume';
+@import './projects';
+
+html {
+    scroll-behavior: smooth;
+  }
+body {
+    background-color: $background;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #5cdb95; 
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5cdb95; 
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #379683; 
+}

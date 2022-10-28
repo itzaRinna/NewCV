@@ -1,0 +1,263 @@
+.start {
+  background-color:#23272b;
+  height: 90vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #f6f6f6;
+
+  .herotxt {
+      text-align: center;
+      h1 {
+          font-weight: 800;
+          font-size: 5.2rem;
+          font-family: 'Major Mono Display', monospace;
+      }
+      h2 {
+          font-weight: 800;
+          font-size: 3.2rem;
+          font-family: 'Montserrat Alternates', monospace;
+      }
+  }
+  .scroll a {
+    position: relative;
+    align-self: flex-end;
+    text-decoration: none;
+    left:0;
+    transition: all 0.2s ease-in-out; 
+  }
+  
+    .scroll a:hover {
+    left: 16px;
+  }
+}
+
+.trap {
+position:relative;
+display:block;
+width: 115px;
+border-bottom:solid 25px #00ff93;
+border-left:solid 15px rgba(255, 0, 0, 0);
+border-right:solid 15px rgba(255, 0, 0, 0);
+}
+
+.trapnavbar {
+position:relative;
+display:block;
+width:30px;
+border-bottom:solid 25px #05386b;
+border-left:solid 15px rgba(255, 0, 0, 0);
+border-right:solid 15px rgba(255, 0, 0, 0);
+}
+
+.logo {
+position: fixed;
+top:0;
+left:0;
+height: 200px;
+width: 200px;
+color: #05386b;
+cursor:pointer;
+div {transition: all 0.15s ease-in-out;}
+}
+.logonavbar {
+position: fixed;
+top:0;
+left:0;
+height: 100px;
+width: 100px;
+cursor:pointer;
+div {transition: all 0.10s ease-in-out;}
+}
+
+.logo:hover div:nth-child(1){
+transform : translate(-10px , -16px);
+}
+.logo:hover div:nth-child(2){
+transform : translate(-20px, -10px);
+}
+.logo:hover div:nth-child(3){
+transform : translate(-10px , -3px);
+}
+
+#trap1 {
+top:120px;
+left:46px;
+}
+#trap2 {
+top:45px;
+left:51px;
+rotate:120deg;
+}
+#trap3 {
+top:50px;
+left:92px;
+rotate:240deg;
+}
+
+#trapbar1 {
+top: 59px;
+left: 57px;
+rotate: -40deg;;
+}
+#trapbar2 {
+top: 0px;
+left: 64px;
+rotate: 250deg;
+
+}
+#trapbar3 {
+top: -2px;
+left: 90px;
+rotate: 180deg;
+}
+
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 2;
+top: 0;
+left: 0vw;
+background-color: #0d1013;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+
+.sidenav a {
+padding: 8px 8px 8px 42px;
+text-decoration: none;
+font-family: 'Montserrat Alternates', sans-serif;
+font-size: 25px;
+color: #edf5e1;
+display: block;
+transition: 0.3s;
+}
+
+.sidenav a:hover {
+color: #00ff93;
+font-size: 30px;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+
+
+.nav-container{
+width: 100%;
+height: 60px;
+top: 0px;
+
+background-color: #23272b;
+}
+
+.nav-buttons{
+justify-content: center;
+display: flex;
+}
+
+.nav-button{
+display: inline-block;
+}
+
+.nv-btn{
+font-family: monospace, monospace;
+background-color: #0d1013;
+color: #edf5e1;
+border: transparent;
+border-radius: 70px 40px;
+height: 40px;
+width: 250px;
+margin-left: -34px;
+margin-top: 22px;
+box-shadow: inset 0 0 0 0 #00ff93;
+transition: ease-out 0.6s;
+font-size: 1.4rem;
+font-weight: 800;
+outline: none;
+
+}
+
+
+
+.nv-btn:hover{
+box-shadow: inset 300px 0 0 0 #00ff93;
+color: #0d1013;
+
+}
+
+
+.service{
+background: #23272b;
+width: 100%;
+padding: 100px 0px;
+}
+.title h2{
+font-family: 'Montserrat Alternates', sans-serif;
+color: #edf5e1;
+font-size: 75px;
+width: 1130px;
+margin: 30px auto;
+text-align: center;
+}
+.box{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 400px;
+}
+.card{
+height: 365px;
+width: 335px;
+padding: 20px 35px;
+background: #1e2125;
+border-radius: 20px;
+margin: 15px;
+position: relative;
+overflow: hidden;
+text-align: center;
+}
+.card i{
+font-size: 50px;
+display: block;
+text-align: center;
+margin: 25px 0px;
+color: #00ff93;
+
+}
+h5{
+color: #edf5e1;
+font-size: 23px;
+margin-bottom: 15px;
+}
+.pra p{
+color: #edf5e1;
+font-size: 16px;
+line-height: 27px;
+margin-bottom: 25px;
+}
+.card .button{
+background-color:#00ff93;
+color: #1e2125;
+text-decoration: none;
+border: 2px solid transparent;
+font-weight: bold;
+padding: 9px 22px;
+border-radius: 30px;
+transition: .4s; 
+}
+.card .button:hover{
+background-color: transparent;
+color: #5cdb95;
+border: 2px solid #00d861;
+cursor: pointer;
+}
+

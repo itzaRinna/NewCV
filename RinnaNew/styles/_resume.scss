@@ -1,0 +1,32 @@
+.resume {
+    top: $top_nav_height;
+    position: relative;
+    font-size: 1.25rem;
+    background-color: $background;
+    color: #edf5e1;
+    font-family: 'Montserrat Alternates', sans-serif;
+    height: 1rem;
+    section {
+        display: flex;
+        overflow: auto;
+        border-right: 0.1em black solid;
+        border-left: 0.1em black solid;
+        border-bottom: 0.1em black solid;
+        background-color: #1e2125;
+
+        .sec_content {
+            padding-left: 3em;
+            padding-right:2em;
+        }
+    }   
+
+    .info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-top: 0.1em black solid;
+        a {
+            color: rgba(0, 0, 0, 0);
+        }  
+}
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <title>Rinna Remake</title>
+  <link rel="icon" type="image/x-icon" href="media-assets/andzilogoW.png">
+  <!--Google Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&amp;display=swap" rel="stylesheet">
+  <!--Stylesheet-->
+  <style>
+body{
+  background-color: #23272b;
+}
+.container{
+  width: 450px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+}
+.container *{
+  color: #00ff93;
+  font-family: "Roboto Mono",monospace;
+}
+.clock{
+  width: 100%;
+  background-color: #1e2125;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 50px 25px;
+  border: 1.5px solid rgba(5, 56, 107,0.06);
+  box-shadow: 0 25px 30px rgba(0,0,0,0.15);
+  backdrop-filter: blur(15px);
+}
+#day{
+  position: relative;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #67ffac;
+  text-align: center;
+}
+.wrapper{
+  text-align: center;
+}
+#time{
+  font-size: 70px;
+  display: inline-block;
+}
+#midday{
+  display: inline-block;
+  font-size: 30px;
+}
+.trap {
+  position:relative;
+  display:block;
+  width:145px;
+  border-bottom:solid 25px #00ff93;
+  border-left:solid 15px rgba(255, 0, 0, 0);
+  border-right:solid 15px rgba(255, 0, 0, 0);
+}
+.logo {
+  position: fixed;
+  top:0;
+  left:0;
+  height: 200px;
+  width: 200px;
+  color: #05386b;
+  cursor:pointer;
+  transition: all 0.15s ease-in-out;
+}
+#trap1 {
+  top:120px;
+  left:46px;
+}
+#trap2 {
+  top:45px;
+  left:51px;
+  rotate:120deg;
+}
+#trap3 {
+  top:50px;
+  left:92px;
+  rotate:240deg;
+}
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 2;
+top: 0;
+left: 0vw;
+background-color: #0d1013;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-family: 'Montserrat Alternates', sans-serif;
+font-size: 25px;
+color: #edf5e1;
+display: block;
+transition: 0.3s;
+}
+.sidenav a:hover {
+color: #00ff93;
+font-size: 30px;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+  </style>
+</head>
+<body>
+  <!--SIDENAV-->
+  <nav id="mySidenav" class="sidenav" style="width: 0px;">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="media-assets/close_dark.svg" alt="close menu"></a>
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="clock.html">Time?</a>
+    </nav>
+
+    <div class="logo" onclick="openNav()">
+      <div class="trap" id="trap1"> </div>
+      <div class="trap" id="trap2"> </div>
+      <div class="trap" id="trap3"> </div>
+    </div>
+  <!--MAIN-->
+  <div class="container">
+      <div class="clock">
+          <div id="day">Friday</div>
+          <div class="wrapper">
+              <div id="time">08:06:31</div>
+              <div id="midday">AM</div>
+          </div>
+      </div>
+  </div>
+
+  <!--Script-->
+  <script src="myscript.js"></script>
+  <script>
+      var time = document.getElementById("time");
+      var day = document.getElementById("day");
+      var midday = document.getElementById("midday");
+
+      var clock = setInterval(
+          function calcTime(){
+          var date_now = new Date();
+          var hr = date_now.getHours();
+          var min = date_now.getMinutes();
+          var sec = date_now.getSeconds();
+          var middayValue = "AM"
+          var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      
+          day.textContent = days[date_now.getDay()];
+
+          middayValue = (hr >= 12) ? "PM" : "AM";
+
+          if(hr == 0){
+          hr = 12;
+          }
+          else if(hr > 12){
+          hr-=12;
+          }
+
+          hr = (hr < 10) ? "0" + hr : hr;
+          min = (min < 10) ? "0" + min : min;
+          sec = (sec < 10) ? "0" + sec : sec;
+
+          time.textContent = hr + ":" + min + ":" + sec;
+          midday.textContent = middayValue;
+          },
+          1000
+      );
+  </script>
+<!-- Code injected by live-server -->
+<script>
+// <![CDATA[  <-- For SVG support
+if ('WebSocket' in window) {
+  (function () {
+    function refreshCSS() {
+      var sheets = [].slice.call(document.getElementsByTagName("link"));
+      var head = document.getElementsByTagName("head")[0];
+      for (var i = 0; i < sheets.length; ++i) {
+        var elem = sheets[i];
+        var parent = elem.parentElement || head;
+        parent.removeChild(elem);
+        var rel = elem.rel;
+        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+          var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+          elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+        }
+        parent.appendChild(elem);
+      }
+    }
+    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+    var address = protocol + window.location.host + window.location.pathname + '/ws';
+    var socket = new WebSocket(address);
+    socket.onmessage = function (msg) {
+      if (msg.data == 'reload') window.location.reload();
+      else if (msg.data == 'refreshcss') refreshCSS();
+    };
+    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+      console.log('Live reload enabled.');
+      sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+    }
+  })();
+}
+else {
+  console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+}
+// ]]>
+</script>
+
+</body></html>

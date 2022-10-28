@@ -1,0 +1,14 @@
+.abt_me{
+  display: flex;
+  padding-top: $top_nav_height;
+  padding-left: 2rem;
+  padding-right: 2rem; 
+  p{
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #edf5e1;
+  }
+  h1 {
+    font-family: 'Major Mono Display', monospace;
+    color: #edf5e1;
+  }
+}
