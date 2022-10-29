@@ -417,7 +417,7 @@ template {
   text-decoration: none;
   bottom: 0;
   left: 0;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .start .scroll a:hover {
   bottom: 18px;
@@ -505,6 +505,7 @@ template {
   text-decoration: none;
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 25px;
+  font-size: 75;
   color: #edf5e1;
   display: block;
   transition: 0.3s;
@@ -512,7 +513,7 @@ template {
 
 .sidenav a:hover {
   color: #00ff93;
-  font-size: 32px;
+  font-size: 36px;
 }
 
 .sidenav .closebtn {
@@ -580,7 +581,7 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 400px;
+  min-height: 230px;
 }
 
 .card {
@@ -616,22 +617,90 @@ h5 {
   margin-bottom: 25px;
 }
 
-.card .button {
-  background-color: #00ff93;
-  color: #1e2125;
-  text-decoration: none;
-  border: 2px solid transparent;
-  font-weight: bold;
-  padding: 9px 22px;
-  border-radius: 30px;
-  transition: 0.4s;
+wrapper {
+  display: grid;
+  margin: 200px 90px auto;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
-.card .button:hover {
-  background-color: transparent;
-  color: #5cdb95;
-  border: 2px solid #00d861;
-  cursor: pointer;
+@media (max-width: 700px) {
+  .wrapper {
+    margin: 200px auto;
+  }
+}
+.wrapper .box {
+  width: 215px;
+  margin: 0 auto;
+  position: relative;
+  perspective: 1000px;
+}
+
+.wrapper .box .front-face {
+  background: #23272b;
+  height: 175px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  transition: all 0.5s ease;
+}
+
+.box .front-face .icon {
+  height: 80px;
+}
+
+.box .front-face .icon i {
+  font-size: 65px;
+}
+
+.box .front-face span,
+.box .back-face span {
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.box .front-face .icon i,
+.box .front-face span {
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box .back-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 220px;
+  width: 100%;
+  padding: 30px;
+  color: #fff;
+  opacity: 0;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  transform: translateY(110px) rotateX(-90deg);
+  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  transition: all 0.5s ease;
+}
+
+.box .back-face p {
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.box:hover .back-face {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.box:hover .front-face {
+  opacity: 0;
+  transform: translateY(-110px) rotateX(90deg);
 }
 
 .container {

@@ -10,11 +10,15 @@ footer{
     font-family: 'Major Mono Display', monospace;
     color: #edf5e1;
 }
+footer img{
+	height: 30px;
+	width: 30px;
+}
 footer p{
 	font-size: 18px;
 	color: white;
 	margin-bottom: 20px;
-	font-weight: bold;
+	font-weight: 900;
 }
 footer h1{
 	font-size: 24px;
