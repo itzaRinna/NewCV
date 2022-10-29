@@ -8,6 +8,7 @@ colourscheme
   black#3: #23272b;
   green#1: #50c878;
   green#2: #00ff93;
+  blue#1: #00ffcc;
   --background-color-2: #212428;
   --shadow-1: 10px 10px 19px #1c1e22,
         -10px -10px 19px #262a2e;
