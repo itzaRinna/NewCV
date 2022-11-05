@@ -713,7 +713,7 @@ template {
 
 .container * {
   color: #00ffcc;
-  font-family: "Major Mono Display", monospace;
+  font-family: "Montserrat Alternates", monospace;
 }
 
 .clock {
@@ -732,8 +732,10 @@ template {
 
 #day {
   position: relative;
-  font-size: 24px;
+  font-size: 28px;
+  font-family: "Anton", sans-serif;
   text-transform: uppercase;
+  letter-spacing: 2px;
   color: #00ffcc;
   text-align: center;
 }
@@ -744,10 +746,12 @@ template {
 
 #time {
   font-size: 74px;
+  text-transform: uppercase;
   display: inline-block;
 }
 
 #midday {
+  text-transform: uppercase;
   display: inline-block;
   font-size: 30px;
 }
