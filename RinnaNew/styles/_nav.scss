@@ -58,8 +58,15 @@
     bottom: 18px;
     left: 18px;
   }
-  .scroll i{
-    color: #d940ff;
+  .scroll button{
+    background-color:transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    i{
+      color:#c850c0;
+    }
   }
 }
 

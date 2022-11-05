@@ -46,7 +46,7 @@
         <p class="read-me">
           <h2>Webs and Game Developer
             <a href="#body">
-              <i><iconify-icon icon="bi:heart-fill" width="50" height="50" rotate="45deg"></iconify-icon></i>
+              <button onclick="playAudio()" type="button"><i><iconify-icon icon="bi:heart-fill" width="50" height="50" rotate="45deg"></iconify-icon></i></button>
           </a>
         </h2>
         </p>
@@ -123,6 +123,10 @@
   <p>@Copyright 2022 by CyZer0 <img src="/media-assets/CyZerO.webp"></p>
 </footer>
 
+<audio id="myAudio">
+  <source src="media-assets/soundtracks/main.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 <!--SCRIPTS-->
 <script src="myscript.js"></script>
 <!-- Code injected by live-server -->
@@ -162,5 +166,16 @@ if ('WebSocket' in window) {
 else {
   console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 }
+//Music//
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
 </script>
+
 </body></html>

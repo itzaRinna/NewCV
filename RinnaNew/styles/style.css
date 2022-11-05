@@ -418,8 +418,15 @@ template {
   bottom: 18px;
   left: 18px;
 }
-.start .scroll i {
-  color: #d940ff;
+.start .scroll button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+.start .scroll button i {
+  color: #c850c0;
 }
 
 .trap {
