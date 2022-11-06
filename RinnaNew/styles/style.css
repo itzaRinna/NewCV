@@ -436,28 +436,6 @@ template {
   width: 71.5rem;
   margin: 30px auto;
   text-align: center;
-  display: block;
-  padding: 15px 24rem;
-  position: relative;
-}
-
-.title h2:after {
-  content: "";
-  display: block;
-  height: 8px;
-  left: 50%;
-  right: 0;
-  position: relative;
-  background: #00ffcc;
-  transition: width 0.4s ease 0s, left 0.4s ease 0s;
-  width: 0;
-}
-
-.title h2:hover:after {
-  width: 100%;
-  left: 0;
-  right: 50%;
-  display: block;
 }
 
 .trap {
@@ -752,6 +730,165 @@ template {
   font-size: 30px;
 }
 
+.skill-bars {
+  padding: 50px;
+  width: 54rem;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #170417, #1b041c);
+  box-shadow: 5px 5px 2px #0a020a, -5px -5px 2px #28062a;
+  margin: auto;
+}
+
+.skill-bars .bar {
+  margin: 20px 0;
+}
+
+.skill-bars .bar:first-child {
+  margin-top: 0px;
+}
+
+.skill-bars .bar .info {
+  margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span {
+  color: #00ffcc;
+  font-family: "Montserrat Alternates", monospace;
+  font-weight: bolder;
+  font-size: 18px;
+  opacity: 0;
+  -webkit-animation: showText 0.5s 1s linear forwards;
+          animation: showText 0.5s 1s linear forwards;
+}
+
+@-webkit-keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line {
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.8);
+  -webkit-animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+          animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@-webkit-keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #6665ee;
+  -webkit-animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+          animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line.html span {
+  width: 90%;
+}
+
+.bar .progress-line.css span {
+  width: 60%;
+}
+
+.bar .progress-line.jquery span {
+  width: 85%;
+}
+
+.bar .progress-line.python span {
+  width: 50%;
+}
+
+.bar .progress-line.mysql span {
+  width: 75%;
+}
+
+.progress-line span::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  -webkit-animation: showText2 0.5s 1.5s linear forwards;
+          animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  -webkit-animation: showText2 0.5s 1.5s linear forwards;
+          animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@-webkit-keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+.progress-line.html span::after {
+  content: "90%";
+}
+
+.progress-line.css span::after {
+  content: "60%";
+}
+
+.progress-line.jquery span::after {
+  content: "85%";
+}
+
+.progress-line.python span::after {
+  content: "50%";
+}
+
+.progress-line.mysql span::after {
+  content: "75%";
+}
+
 .abt_me {
   display: flex;
   padding-top: 30px;
@@ -797,56 +934,6 @@ template {
 }
 .resume .info a {
   color: rgba(0, 0, 0, 0);
-}
-
-.project_main {
-  padding-top: 30px;
-  min-height: 100vh;
-  max-width: 100vw;
-  display: flex;
-  flex-direction: column;
-  font-family: monospace;
-  font-size: 1.35rem;
-  color: #edf5e1;
-  background-color: #120416;
-}
-.project_main h1 {
-  padding-left: 1rem;
-  font-size: 2em;
-  font-family: "Major Mono Display", monospace;
-  text-align: center;
-}
-
-.all_projects {
-  min-height: -webkit-fit-content;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  padding-bottom: 4rem;
-}
-.all_projects div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 85%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-.all_projects div article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: monospace;
-  width: 90%;
-  border: 5px inset #01a380;
-  padding: 0.5rem;
-  border-radius: 5px;
-  margin: 1rem;
 }
 
 html {
