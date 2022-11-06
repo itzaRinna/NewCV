@@ -1,8 +1,9 @@
 footer{
 	align-items: center;
 	border-radius: 2.5rem;
-	border: 2.5px solid rgba(0, 0, 0, 0.08);
-	box-shadow: 0 25px 30px rgba(0,0,0,0.6);
+	background: linear-gradient(145deg, #250a2e, #200827);
+	box-shadow:  5px 5px 3px #0e0411,
+             	-5px -5px 3px #380e45;
 	background: #23092B;
 	color: #edf5e1;
 	display: inline-block;
