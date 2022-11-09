@@ -15,8 +15,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&amp;family=Montserrat+Alternates&amp;family=VT323&amp;display=swap" rel="stylesheet">
 </head>
 
@@ -55,6 +53,35 @@
   </section>
   <!--NEW BUSINESSCARD-->
   <section class="body" id="body">
+    <!--Work-->
+    <div class="work">
+      <div class="title">
+        <h2>Work</h2>
+        <div class="work-content">
+          <div class="work-images">
+             <img src="media-assets/work_slides/s1.jpg">
+             <img src="media-assets/work_slides/s2.jpg">
+             <img src="media-assets/work_slides/s3.jpg">
+             <img src="media-assets/work_slides/s4.jpg">
+          </div>
+       </div>
+       <script>
+          var indexValue = 0;
+          function slideShow(){
+            setTimeout(slideShow, 1850);
+            var x;
+            const img = document.querySelectorAll("img");
+            for(x = 0; x < img.length; x++){
+              img[x].style.display = "none";
+            }
+            indexValue++;
+            if(indexValue > img.length){indexValue = 1}
+            img[indexValue -1].style.display = "block";
+          }
+          slideShow();
+       </script>
+      </div>
+    </div>
     <!--Skills Section-->
     <div class="skills">
       <div class="title">
@@ -224,7 +251,9 @@ function playAudio() {
 
 function pauseAudio() { 
   x.pause(); 
-} 
+}
+
+
 </script>
 
 </body></html>

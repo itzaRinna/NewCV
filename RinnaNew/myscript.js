@@ -9,11 +9,6 @@ function closeNav() {
 
 }
 
-
-
-
-
-
 const ethereumButton = document.querySelector('.sendEthButton');
 const sendEthButton = document.querySelector('.sendEthButton');
 

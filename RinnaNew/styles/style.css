@@ -577,6 +577,29 @@ template {
   color: #370147;
 }
 
+.work-content {
+  margin: auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 800px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 7px 7px 10px #070209, -7px -7px 10px #1d0623;
+}
+
+.work-content .work-images {
+  height: 100%;
+  width: 100%;
+}
+
+.work-images img {
+  height: 100%;
+  width: 100%;
+}
+
 .service {
   background: #120416;
   width: 100%;
