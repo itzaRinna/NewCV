@@ -577,27 +577,26 @@ template {
   color: #370147;
 }
 
-.work-content {
+.work-container {
+  height: 512px;
+  width: 1280px;
+  position: relative;
   margin: auto;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 500px;
-  width: 800px;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 7px 7px 10px #070209, -7px -7px 10px #1d0623;
+  border-radius: 20px;
+  box-shadow: 11px 11px 10px #0a020a, -11px -11px 10px #28062a;
 }
 
-.work-content .work-images {
-  height: 100%;
-  width: 100%;
+.work-content {
+  display: block;
+  float: left;
+  margin-left: 30rem;
+  position: relative;
 }
 
-.work-images img {
-  height: 100%;
-  width: 100%;
+.display img {
+  width: 315px;
+  height: auto;
+  border-radius: 10px;
 }
 
 .service {
