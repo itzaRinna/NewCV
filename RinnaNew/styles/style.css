@@ -363,7 +363,6 @@ template {
   font-weight: bolder;
   font-size: 5.8rem;
   font-family: "Major Mono Display", monospace;
-  color: #00ffcc;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid transparent; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -406,6 +405,11 @@ template {
   font-family: "Montserrat Alternates", monospace;
   text-align: center;
 }
+.start h1.gradient-text {
+  background: linear-gradient(2deg, #c850c0, #00ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .start .scroll a {
   position: relative;
   align-self: flex-end;
@@ -436,6 +440,19 @@ template {
   width: 71.5rem;
   margin: 30px auto;
   text-align: center;
+}
+
+.title h2.gradient-text {
+  background: linear-gradient(180deg, #00ffcc, #f6f6f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
 }
 
 .trap {
@@ -682,8 +699,8 @@ template {
 }
 
 .skill-bars {
-  padding: 50px;
-  width: 54rem;
+  padding: 60px;
+  width: 60rem;
   border-radius: 25px;
   background: linear-gradient(145deg, #170417, #1b041c);
   box-shadow: 5px 5px 2px #0a020a, -5px -5px 2px #28062a;
@@ -861,7 +878,7 @@ template {
   position: relative;
   margin: auto;
   border-radius: 20px;
-  box-shadow: 11px 11px 10px #0a020a, -11px -11px 10px #28062a;
+  box-shadow: 5px 5px 2px #0a020a, -5px -5px 2px #28062a;
 }
 
 .container {
@@ -961,26 +978,9 @@ template {
 }
 
 html {
-  scroll-behavior: initial;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #120416;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: red;
-  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */
