@@ -361,7 +361,7 @@ template {
 .start .herotxt .slide h1 {
   text-align: left;
   font-weight: bolder;
-  font-size: 5.8rem;
+  font-size: 6rem;
   font-family: "Major Mono Display", monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid transparent; /* The typwriter cursor */
@@ -401,7 +401,7 @@ template {
 }
 .start .herotxt h2 {
   font-weight: 800;
-  font-size: 3.4rem;
+  font-size: 3.6rem;
   font-family: "Montserrat Alternates", monospace;
   text-align: center;
 }
