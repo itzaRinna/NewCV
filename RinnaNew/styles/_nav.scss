@@ -121,11 +121,19 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.heropic-container{
-  width: 32rem;
-  height: 32rem;
+
+.outer-heropic-container{
+  width: 34rem;
+  height: 34rem;
   background-color: #000;
+  border-radius: 2rem;
+  border-color: #00ffcc;
   margin: 0px -45rem;
+}
+.inner-heropic-container{
+  width: 15rem;
+  height: 15rem;
+  margin: 8.5rem auto;
 }
 
 .section{
