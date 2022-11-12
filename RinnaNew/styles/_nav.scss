@@ -8,8 +8,13 @@
   align-items: center;
   flex-direction: column;
   color: #f6f6f6;
-
+.main-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .herotxt {
+  margin-left: -35rem;
   .slide h1 {
     text-align: left;
     font-weight: bolder;
@@ -23,6 +28,12 @@
     letter-spacing: .1em; /* Adjust as needed */
     animation:
       typing 3s;
+  }
+  //Text_Colour//
+  h1.gradient-text{
+    background: linear-gradient(2deg,#c850c0, #00ffcc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   
   /* The typing effect */
@@ -42,11 +53,35 @@
         font-family: 'Montserrat Alternates', monospace;
         text-align: center;
     }
+    h2 span::after {
+      content: "";
+      background: linear-gradient(-45deg,#c850c0, #4b00b2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: change-text 9s ease-in-out 0s infinite;
   }
-  h1.gradient-text{
-    background: linear-gradient(2deg,#c850c0, #00ffcc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+  @keyframes change-text {
+      0% {
+          content: "Webs";
+      }
+
+      25% {
+          content: "Game";
+      }
+
+      50% {
+          content: "Webs";
+      }
+
+      75% {
+          content: "Game";
+      }
+
+      100% {
+          content: "Webs";
+      }
+  }
   }
 
   .scroll a {
@@ -86,6 +121,13 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.heropic-container{
+  width: 32rem;
+  height: 32rem;
+  background-color: #000;
+  margin: 0px -45rem;
+}
+
 .section{
   display: grid;
   place-items: center;
@@ -93,6 +135,7 @@
   min-height: 100vh;
 
 }
+
 //Overview-End//
 //LOGO-Start//
 .trap {

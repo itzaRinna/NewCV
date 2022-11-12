@@ -355,7 +355,13 @@ template {
   flex-direction: column;
   color: #f6f6f6;
 }
+.start .main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .start .herotxt {
+  margin-left: -35rem;
   /* The typing effect */
 }
 .start .herotxt .slide h1 {
@@ -370,6 +376,11 @@ template {
   letter-spacing: 0.1em; /* Adjust as needed */
   -webkit-animation: typing 3s;
           animation: typing 3s;
+}
+.start .herotxt h1.gradient-text {
+  background: linear-gradient(2deg, #c850c0, #00ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @-webkit-keyframes typing {
   from {
@@ -405,10 +416,47 @@ template {
   font-family: "Montserrat Alternates", monospace;
   text-align: center;
 }
-.start h1.gradient-text {
-  background: linear-gradient(2deg, #c850c0, #00ffcc);
+.start .herotxt h2 span::after {
+  content: "";
+  background: linear-gradient(-45deg, #c850c0, #4b00b2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-animation: change-text 9s ease-in-out 0s infinite;
+          animation: change-text 9s ease-in-out 0s infinite;
+}
+@-webkit-keyframes change-text {
+  0% {
+    content: "Webs";
+  }
+  25% {
+    content: "Game";
+  }
+  50% {
+    content: "Webs";
+  }
+  75% {
+    content: "Game";
+  }
+  100% {
+    content: "Webs";
+  }
+}
+@keyframes change-text {
+  0% {
+    content: "Webs";
+  }
+  25% {
+    content: "Game";
+  }
+  50% {
+    content: "Webs";
+  }
+  75% {
+    content: "Game";
+  }
+  100% {
+    content: "Webs";
+  }
 }
 .start .scroll a {
   position: relative;
@@ -446,6 +494,13 @@ template {
   background: linear-gradient(180deg, #00ffcc, #f6f6f6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.heropic-container {
+  width: 32rem;
+  height: 32rem;
+  background-color: #000;
+  margin: 0px -45rem;
 }
 
 .section {
