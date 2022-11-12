@@ -49,8 +49,8 @@ footer h1{
 }
 .social-icon:hover{
 	background-color: #26005b;
-	box-shadow:  -1px -1px 0.5px #0f0024,
-             	  1px 1px 0.5px #3d0092;
+	box-shadow: inset -1px -1px 0.5px #3d0092,
+             	inset 1px 1px 0.5px #0f0024;
 }
 span.gradient-text{
     background: linear-gradient(2deg,#f6f6f6, #00ffcc);
