@@ -939,9 +939,10 @@ template {
   height: 450px;
   width: 350px;
   position: relative;
+  position: relative;
   margin: auto;
   border-radius: 20px;
-  box-shadow: 5px 5px 2px #0a020a, -5px -5px 2px #28062a;
+  background-color: #000;
 }
 
 .container {
