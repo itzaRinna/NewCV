@@ -67,7 +67,7 @@
       }
 
       25% {
-          content: "Game";
+          content: "A.I.";
       }
 
       50% {
@@ -75,7 +75,7 @@
       }
 
       75% {
-          content: "Game";
+          content: "A.I.";
       }
 
       100% {
@@ -123,12 +123,25 @@
 }
 
 .outer-heropic-container{
-  width: 34rem;
-  height: 34rem;
-  background-color: #000;
+  width: 37rem;
+  height: 37rem;
   border-radius: 2rem;
   border-color: #00ffcc;
   margin: 0px -45rem;
+  background: rgba(0, 0, 0, 0.22);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.outer-heropic-container img{
+  width: 37rem;
+  height: auto;
+  float: left;
+  margin-right: -10rem;
+  margin-left: 0rem;
+  margin-top: -14.5rem;
+  margin-bottom: -10rem;
 }
 .inner-heropic-container{
   width: 15rem;
