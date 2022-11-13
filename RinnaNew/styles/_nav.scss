@@ -234,13 +234,15 @@ transition: 0.5s;
 }
 .sidenav .nav-wrapper {
   width: fit-content;
+  padding-top: 70px;
+  padding-left: 70px;
 }
 .sidenav a {
   padding: 8px;
   text-decoration: none;
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 8.5rem;
-  -webkit-text-stroke: .5px rgba(255,255,255,.5);
+  -webkit-text-stroke: .5px #edf5e1;
   color:transparent;
   display: flex;
   transition: 0.5s;
@@ -257,6 +259,29 @@ top: 0;
 right: 25px;
 font-size: 36px;
 margin-left: 50px;
+}
+.align-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.decoration-wrapper{
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+}
+.decoration-wrapper .eye {
+  width: 32rem;
+  height: 32rem;
+  border: solid 5px #edf5e1;
+  border-radius: 75% 20%;
+  transform: rotate(60deg);
+}
+.decoration-wrapper img{
+  width: 24rem;
+  height: 24rem;
+  padding: 65px;
 }
 //SIDENAV-END//
 
