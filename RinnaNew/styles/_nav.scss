@@ -274,9 +274,10 @@ margin-left: 50px;
 .decoration-wrapper .eye {
   width: 32rem;
   height: 32rem;
-  border: solid 5px #edf5e1;
+  border: solid .05px #edf5e1;
   border-radius: 75% 20%;
   transform: rotate(60deg);
+  background: linear-gradient(-80deg, #bf2bcc, #4f0169);
 }
 .decoration-wrapper img{
   width: 24rem;
