@@ -1,0 +1,15 @@
+/* Variables */
+$background: #120416;
+$top_nav_height:30px;
+
+
+/* Linking Stylesheets By Loading Order */
+@import './normalize.scss';
+@import './mobile';
+@import './nav';
+html{
+  scroll-behavior: smooth;
+}
+body {
+    background-color: $background;
+}
