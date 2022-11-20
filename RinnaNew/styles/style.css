@@ -420,41 +420,71 @@ template {
   background: linear-gradient(-45deg, #c850c0, #4b00b2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: change-text 9s ease-in-out 0s infinite;
-          animation: change-text 9s ease-in-out 0s infinite;
+  -webkit-animation: change-text 10s ease-in-out 0s infinite;
+          animation: change-text 10s ease-in-out 0s infinite;
 }
 @-webkit-keyframes change-text {
   0% {
     content: "Webs";
   }
-  25% {
+  20% {
+    content: "A.I.";
+  }
+  30% {
+    content: "Webs";
+  }
+  40% {
     content: "A.I.";
   }
   50% {
     content: "Webs";
   }
-  75% {
+  60% {
     content: "A.I.";
   }
-  100% {
+  70% {
     content: "Webs";
+  }
+  80% {
+    content: "A.I.";
+  }
+  90% {
+    content: "Webs";
+  }
+  100% {
+    content: "A.I.";
   }
 }
 @keyframes change-text {
   0% {
     content: "Webs";
   }
-  25% {
+  20% {
+    content: "A.I.";
+  }
+  30% {
+    content: "Webs";
+  }
+  40% {
     content: "A.I.";
   }
   50% {
     content: "Webs";
   }
-  75% {
+  60% {
     content: "A.I.";
   }
-  100% {
+  70% {
     content: "Webs";
+  }
+  80% {
+    content: "A.I.";
+  }
+  90% {
+    content: "Webs";
+  }
+  100% {
+    content: "A.I.";
   }
 }
 .start .scroll a {
@@ -742,11 +772,12 @@ template {
 }
 
 .wrapper .box .front-face {
-  background: linear-gradient(145deg, #170417, #1b041c);
-  box-shadow: 5px 5px 2px #0a020a, -5px -5px 2px #28062a;
+  backdrop-filter: blur(2px) saturate(120%);
+  -webkit-backdrop-filter: blur(2px) saturate(120%);
+  background-color: rgba(17, 25, 39, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.125);
   height: 220px;
   border-radius: 2rem;
-  border: 2.5px solid rgba(0, 0, 0, 0.08);
   width: 100%;
   display: flex;
   padding: 50px;
@@ -815,7 +846,6 @@ template {
   padding: 60px;
   width: 60rem;
   border-radius: 25px;
-  background: linear-gradient(145deg, #170417, #1b041c);
   box-shadow: 5px 5px 2px #0a020a, -5px -5px 2px #28062a;
   margin: auto;
 }
@@ -1049,5 +1079,5 @@ html {
 }
 
 body {
-  background-color: #010619;
+  background-color: #000C1C;
 }/*# sourceMappingURL=style.css.map */
