@@ -1,4 +1,4 @@
 <h1>A landing portfolio website for my personal use </h1>
-## ===============DISCONTINUED FOR NOW===============
+<p>===============DISCONTINUED FOR NOW===============</p>
 ## Link :
 https://rinstream.netlify.app/
