@@ -690,22 +690,21 @@ template {
   align-items: center;
   min-height: 350px;
 }
-
 .wrapper {
   display: grid;
-  margin: 50px 325px auto;
-  grid-gap: 80px;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin: auto;
+  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
 }
 
 @media (max-width: 700px) {
   .wrapper {
-    margin: 200px auto;
+    margin: 50px auto; /* Adjusted margin for smaller screens */
   }
 }
+
 .wrapper .box {
-  width: 325px;
-  margin: 0 auto;
+  width: 100%; /* Adjusted width to fit grid */
   position: relative;
   perspective: 1000px;
 }
@@ -716,13 +715,13 @@ template {
   height: 220px;
   border-radius: 2rem;
   border: 2.5px solid rgba(0, 0, 0, 0.08);
-  width: 100%;
   display: flex;
-  padding: 50px;
+  padding: 50px 70px; /* Adjusted padding for better alignment */
   flex-direction: column;
   justify-content: center;
   transition: all 0.45s ease;
 }
+
 
 .box .front-face .icon {
   align-items: center;
@@ -752,7 +751,7 @@ template {
   border-radius: 2rem;
   z-index: 1;
   height: 220px;
-  width: 100%;
+  width: 75%;
   padding: 45px;
   color: #fff;
   opacity: 0;
@@ -916,28 +915,47 @@ template {
 }
 
 .work-container {
-  display: grid;
-  margin: 50px 325px auto;
-  grid-gap: 80px;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.work-row {
+h2 {
+  text-align: center;
+  color: #333;
+}
+.work {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 20px;
 }
-
-.work-display {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 450px;
-  width: 350px;
-  position: relative;
-  position: relative;
-  margin: auto;
-  border-radius: 20px;
-  background-color: #000;
+.work-item {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.work-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+.work-item-content {
+  padding: 10px;
+}
+.work-item h3 {
+  margin-top: 0;
+  color: #333;
+}
+.work-item p {
+  margin-bottom: 0;
+  color: #666;
 }
 
 .container {
